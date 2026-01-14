@@ -1,8 +1,8 @@
 # Dynamic Multi-Kernel Perception and Content-Aware Signal Enhancement for Robust Real-Time Weld Defect Detection<sup>📌</sup>
 
-<a href="https://github.com/your_username"><img src="https://img.shields.io/badge/GitHub-@your_username-000000.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
+<a href="https://github.com/xf102c"><img src="https://img.shields.io/badge/GitHub-@xf102c-000000.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
 <a href="#" target="_blank"><img src="https://img.shields.io/badge/Computer Vision-000000.svg?logo=GitBook" alt="Computer Vision"></a>
-[![License](https://img.shields.io/github/license/your_username/your_repo_name)](LICENSE)
+
 
 # Table of Contents
 
