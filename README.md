@@ -45,7 +45,7 @@
 
 WD-DEFT is designed for robust defect detection in real-world factory settings.
 
-<div align=center><img src="images/1.bmp" alt="WD-DEFT Dataset Sample"></div>
+<div align=center><img src="images/1.png" alt="WD-DEFT Dataset Sample"></div>
 
 <p>The WD-DEFT contains <b>[6071]</b> images with <b>[6]</b> types of defects. It covers authentic industrial scenarios to ensure the model's practical applicability.</p>
 
