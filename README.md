@@ -1,75 +1,100 @@
-# Dynamic Multi-Kernel Perception and Content-Aware Signal Enhancement for Robust Real-Time Weld Defect Detection<sup>📌</sup>
+# YOLO-DMSE: Dynamic Multi-Kernel Perception and Signal Enhancement Model for Real-Time Industrial Weld Detection
 
-<a href="https://github.com/xf102c"><img src="https://img.shields.io/badge/GitHub-@xf102c-000000.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
-<a href="#" target="_blank"><img src="https://img.shields.io/badge/Computer Vision-000000.svg?logo=GitBook" alt="Computer Vision"></a>
+<p align="center">
+  <a href="https://github.com/xf102c"><img src="https://img.shields.io/badge/GitHub-@xf102c-181717.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Computer_Vision-Object_Detection-blue.svg?logo=GitBook" alt="Computer Vision"></a>
+  <a href="#"><img src="https://img.shields.io/badge/License-MIT-success.svg" alt="License"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Under_Review-orange.svg" alt="Status"></a>
+</p>
 
-
-# Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)
-- [Key Challenges](#1-key-challenges-in-robust-weld-defect-detection)
-  - [Complex Signal Interference](#1complex-signal-interference)
-  - [Multi-Scale Defect Variation](#2multi-scale-defect-variation)
-- [Our Dataset](#2-our-dataset-wd-deft)
-  - [Weld Defect: WD-DEFT](#1weld-defect-wd-deft)
-- [Notification](#notification)
+- [Key Challenges in Industrial Measurement](#key-challenges-in-industrial-measurement)
+-[Proposed Methodology: YOLO-DMSE](#proposed-methodology-yolo-dmse)
+-[WD-DEFT Benchmark](#wd-deft-benchmark)
+- [Experimental Results](#experimental-results)
+-[Dataset Access Notification](#dataset-access-notification)
 - [Citation](#citation)
 - [License](#license)
 
+---
 
 ## Introduction
 
-<p>We present the <strong>WD-DEFT (Weld Defect)</strong> dataset, which includes data collected from authentic industrial scenarios, aiming to bridge the lab-to-factory gap. </p>
+Automated weld defect detection is crucial for ensuring product quality and structural reliability in modern manufacturing. However, applying generic object detectors to authentic industrial scenarios is frequently impeded by severe background interference and extreme defect scale variations. 
 
-<p>To address the limitations of existing methods in complex industrial environments, we propose a Dynamic Multi-Kernel Perception and Content-Aware Signal Enhancement network. This approach effectively suppresses background noise and enhances defect features for robust real-time detection.</p>
+To bridge the domain gap between laboratory research and real-world factory deployment, we propose **YOLO-DMSE**, a high-precision, real-time detector engineered for complex industrial environments. Furthermore, we introduce the **WD-DEFT (Weld Defect)** dataset, a comprehensive benchmark acquired directly from authentic industrial manufacturing lines with high ecological validity.
 
+This repository contains the official implementation of our proposed method and instructions for accessing the WD-DEFT dataset.
 
-## 1. Key Challenges in Robust Weld Defect Detection
+---
 
-### 1）Complex Signal Interference
+## Key Challenges in Industrial Measurement
 
-<p>In authentic industrial scenarios, signal noise and environmental factors often interfere with the clear identification of defect boundaries.</p>
+Deploying visual inspection systems in authentic welding scenarios presents distinct technical bottlenecks:
 
-👆 [<b>BACK to Table of Contents</b> -->](#table-of-contents)
+- **Severe Background Interference (Low SNR):** Industrial imaging is plagued by complex optical interference, such as arc glare, metal spatter, and surface reflections. Critical micro-defects are frequently submerged in high-frequency background textures, resulting in a critically low Signal-to-Noise Ratio (SNR).
+- **Extreme Morphological Heterogeneity:** Welding defects exhibit drastic variations in scale and shape—ranging from highly anisotropic linear faults (e.g., lack of fusion, undercut) to isotropic minute features (e.g., porosity). 
+- **The Accuracy-Efficiency Paradox:** Industrial online monitoring imposes stringent real-time constraints. Existing large-scale models fail to meet real-time inference requirements on resource-limited edge devices, while lightweight models often lack the representation capacity for complex defect morphologies.
 
-### 2）Multi-Scale Defect Variation
+---
 
-<p>Defects vary drastically in size and shape. Capturing both minute cracks and large structural faults simultaneously requires dynamic perception capabilities.</p>
+## Proposed Methodology: YOLO-DMSE
 
-👆 [<b>BACK to Table of Contents</b> -->](#table-of-contents)
+To break the inherent trade-off between detection accuracy and inference speed, YOLO-DMSE integrates three physics-aware architectural innovations:
 
+1. **Dynamic Multi-kernel Perception Unit (DMPU):** Employs an Adaptive Kernel-Mixture (AKM) mechanism with parallel branches of varying kernel shapes (e.g., strip and square kernels). This design robustly captures multi-scale, orientation-aware features for both compact isotropic patterns and elongated directional faults.
+2. **C2PSA with Dynamic Tanh (C2PSA-DYT):** Functions as a content-aware signal calibrator. By incorporating a learnable non-linear Dynamic Tanh layer, it acts as a soft-thresholding filter that amplifies weak defect signals while effectively suppressing high-intensity impulsive noise (e.g., spatter) prior to feature aggregation.
+3. **Lightweight Shared Convolutional Detection Head (LSCD):** Utilizes a "Divide-Unify-Decouple" deep parameter sharing paradigm. It significantly enhances cross-scale feature generalization while minimizing model complexity, ensuring optimal deployment on resource-constrained devices.
 
-## 2. Our Dataset: WD-DEFT
+---
 
-### 1）Weld Defect: WD-DEFT
+## WD-DEFT Benchmark
 
-WD-DEFT is designed for robust defect detection in real-world factory settings.
+To address the absence of a unified public benchmark with high ecological validity, we constructed the **WD-DEFT** dataset. 
 
-<div align=center><img src="images/1.png" alt="WD-DEFT Dataset Sample"></div>
+<div align=center><img src="images/1.png" alt="WD-DEFT Dataset Sample" width="80%"></div>
 
-<p>The WD-DEFT contains <b>[6071]</b> images with <b>[6]</b> types of defects. It covers authentic industrial scenarios to ensure the model's practical applicability.</p>
+- **Data Acquisition:** Acquired from authentic industrial sites using a Hikrobot MV-CU050-90GC industrial camera.
+- **Scale:** Comprises **6,071** high-resolution images encompassing **13,583** independently annotated instances.
+- **Categories:** Covers 6 specific classes, including 5 critical weld defects (**Porosity, Undercut, Misalignment, Burn-through, Lack of fusion**) and a control group of defect-free (**Good**) samples to mitigate false positive rates in practical production.
 
-👆 [<b>BACK to Table of Contents</b> -->](#table-of-contents)
+---
 
-## Notification
+## Experimental Results
 
-<b>The dataset containing the original images appearing in the paper is restricted.</b>
+Extensive evaluations on the WD-DEFT benchmark demonstrate that YOLO-DMSE achieves a superior Pareto frontier for industrial defect inspection:
 
-<p>The WD-DEFT is collected from actual industrial production lines. Therefore, this dataset is limited to academic use！！！Prohibited for any commercial use！！！
-<strong>You can only use this dataset for research purpose.</strong>
-If you need this dataset to do some research, please contact us. After review and permission, we will provide the dataset to you.</p>
+- **Detection Precision:** YOLO-DMSE-N achieves an **mAP50 of 90.1%** and **mAP50-95 of 49.5%**, outperforming the YOLO11-N baseline by 1.6% and 0.9%, respectively.
+- **Computational Efficiency:** Attains a **12% reduction in parameters** (down to 2.2M) and a **19% reduction in FLOPs** (5.1G) compared to the baseline.
+- **Real-Time Capability:** Maintains an ultra-fast inference speed of **201 FPS**, fully satisfying the stringent requirements of high-speed manufacturing lines.
 
-If you have any questions or idea, please let me know <p></p>
+---
 
+## Dataset Access Notification
 
-👆 [<b>BACK to Table of Contents</b> -->](#table-of-contents)
+**⚠️ The raw image data within the WD-DEFT dataset is subject to strict access restrictions.**
+
+Since the WD-DEFT dataset is acquired from authentic and active industrial production lines, it contains sensitive proprietary manufacturing characteristics. Therefore:
+1. **Academic Use Only:** This dataset is strictly restricted to academic and non-profit research purposes.
+2. **Commercial Prohibition:** Any form of commercial usage, redistribution, or application in commercial product training is strictly prohibited.
+
+**How to Request Access:**
+If you wish to utilize this dataset for your research, please contact the corresponding authors via email with your institutional affiliation and a brief description of your research plan. Access will be granted upon successful review and approval.
+
+If you have any questions, ideas, or collaboration proposals, please feel free to open an issue or reach out directly!
+
+---
 
 ## Citation
-This paper is still under review......
 
-👆 [<b>BACK to Table of Contents</b> -->](#table-of-contents)
+If you find our work, model, or dataset useful in your research, please consider citing our paper (currently under review at *IEEE Transactions on Instrumentation and Measurement*):
 
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+```bibtex
+@article{pei2024yolodmse,
+  title={YOLO-DMSE: Dynamic Multi-Kernel Perception and Signal Enhancement Model for Real-Time Industrial Weld Detection},
+  author={Pei, Shengbing and Chu, Zhaozhan and Zhang, Chao and Lv, Zhao},
+  journal={Under Review},
+  year={2024}
+}
