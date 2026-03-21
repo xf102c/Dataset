@@ -89,12 +89,4 @@ If you have any questions, ideas, or collaboration proposals, please feel free t
 
 ## Citation
 
-If you find our work, model, or dataset useful in your research, please consider citing our paper (currently under review at *IEEE Transactions on Instrumentation and Measurement*):
 
-```bibtex
-@article{pei2024yolodmse,
-  title={YOLO-DMSE: Dynamic Multi-Kernel Perception and Signal Enhancement Model for Real-Time Industrial Weld Detection},
-  author={Pei, Shengbing and Chu, Zhaozhan and Zhang, Chao and Lv, Zhao},
-  journal={Under Review},
-  year={2024}
-}
