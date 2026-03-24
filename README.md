@@ -53,30 +53,22 @@ To break the inherent trade-off between detection accuracy and inference speed, 
 ## WD-DEFT Benchmark
 
 To address the absence of a unified public benchmark with high ecological validity, we constructed the WD-DEFT dataset.
-
-<div align="center">
-<img src="image_d65602.jpg" alt="WD-DEFT Dataset Sample" width="80%">
+<div align=center><img src="images/1.png" alt="WD-DEFT Dataset Sample" width="80%"></div>
 
 
 <p><i>Representative samples from the WD-DEFT dataset illustrating the 6 specific classes.</i></p>
 </div>
 
-Data Acquisition: Acquired from authentic industrial sites using a Hikrobot MV-CU050-90GC industrial camera.
 
-Scale: Comprises 6,071 high-resolution images encompassing 13,583 independently annotated instances.
-
-Categories: Covers 6 specific classes, including 5 critical weld defects and a control group of defect-free samples to mitigate false positive rates in practical production. As illustrated in the figure above, the classes are categorized as follows:
+- **Data Acquisition:** Acquired from authentic industrial sites using a Hikrobot MV-CU050-90GC industrial camera.
+- **Scale:** Comprises **6,071** high-resolution images encompassing **13,583** independently annotated instances.
+- **Categories:**  Covers 6 specific classes, including 5 critical weld defects and a control group of defect-free samples to mitigate false positive rates in practical production. As illustrated in the figure above, the classes are categorized as follows:
 
 a: Misalignment
-
 b: Undercut
-
 c: Lack of fusion
-
 d: Good
-
 e: Porosity
-
 f: Burn-through
 
 ## Experimental Results
