@@ -55,7 +55,7 @@ To break the inherent trade-off between detection accuracy and inference speed, 
 To address the absence of a unified public benchmark with high ecological validity, we constructed the WD-DEFT dataset.
 
 
-<div align=center><img src="images/3.png" alt="WD-DEFT Dataset Sample" width="80%"></div>
+<div align=center><img src="images/3.png" alt="WD-DEFT Dataset Samples" width="80%"></div>
 <p><i>Representative samples from the WD-DEFT dataset illustrating the 6 specific classes.</i></p>
 </div>
 
@@ -78,7 +78,10 @@ Extensive evaluations on the WD-DEFT benchmark demonstrate that YOLO-DMSE achiev
 - **Detection Precision:** YOLO-DMSE-N achieves an **mAP50 of 90.1%** and **mAP50-95 of 49.5%**, outperforming the YOLO11-N baseline by 1.6% and 0.9%, respectively.
 - **Computational Efficiency:** Attains a **12% reduction in parameters** (down to 2.2M) and a **19% reduction in FLOPs** (5.1G) compared to the baseline.
 - **Real-Time Capability:** Maintains an ultra-fast inference speed of **201 FPS**, fully satisfying the stringent requirements of high-speed manufacturing lines.
-
+<p align="center">
+  <img src="docs/images/heatmap.png" alt="Grad-CAM Heatmap Visualization" width="48%">
+  <img src="docs/images/predictions.png" alt="Prediction Results" width="48%">
+</p>
 ---
 
 ## Dataset Access Notification
