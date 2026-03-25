@@ -53,7 +53,7 @@ To break the inherent trade-off between detection accuracy and inference speed, 
 ## WD-DEFT Benchmark
 
 To address the absence of a unified public benchmark with high ecological validity, we constructed the WD-DEFT dataset.
-<div align=center><img src="images/2.png" alt="WD-DEFT Dataset Sample" width="80%"></div>
+
 
 <div align=center><img src="images/3.png" alt="WD-DEFT Dataset Sample" width="80%"></div>
 <p><i>Representative samples from the WD-DEFT dataset illustrating the 6 specific classes.</i></p>
