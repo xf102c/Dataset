@@ -78,26 +78,13 @@ Extensive evaluations on the WD-DEFT benchmark demonstrate that YOLO-DMSE achiev
 - **Detection Precision:** YOLO-DMSE-N achieves an **mAP50 of 90.1%** and **mAP50-95 of 49.5%**, outperforming the YOLO11-N baseline by 1.6% and 0.9%, respectively.
 - **Computational Efficiency:** Attains a **12% reduction in parameters** (down to 2.2M) and a **19% reduction in FLOPs** (5.1G) compared to the baseline.
 - **Real-Time Capability:** Maintains an ultra-fast inference speed of **201 FPS**, fully satisfying the stringent requirements of high-speed manufacturing lines.
-<table align="center">
-  <tr>
-    <td align="center" width="50%">
-      <img src="images/2.png" alt="Grad-CAM Heatmap Visualization">
-    </td>
-    <td align="center" width="50%">
-      <img src="images/1.bmp" alt="Prediction Results">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <b>(a) Grad-CAM Heatmap Visualization</b><br>
-      <i>Illustrates the model's attention. The highlighted areas show that YOLO-DMSE focuses precisely on actual defect regions, effectively minimizing background interference.</i>
-    </td>
-    <td align="center">
-      <b>(b) Prediction Results</b><br>
-      <i>Shows the final detection outputs. It demonstrates the model's high precision in localizing bounding boxes and classifying industrial defects with high confidence.</i>
-    </td>
-  </tr>
-</table>
+![Grad-CAM Heatmap Visualization](images/2.png)
+**(a) Grad-CAM Heatmap Visualization**  
+*Illustrates the model's attention. The highlighted areas show that YOLO-DMSE focuses precisely on actual defect regions, effectively minimizing background interference.*
+
+![Prediction Results](images/1.png)
+**(b) Prediction Results**  
+*Shows the final detection outputs. It demonstrates the model's high precision in localizing bounding boxes and classifying industrial defects with high confidence.*
 
 ## Dataset Access Notification
 
