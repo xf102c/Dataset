@@ -81,10 +81,10 @@ Extensive evaluations on the WD-DEFT benchmark demonstrate that YOLO-DMSE achiev
 <table align="center">
   <tr>
     <td align="center" width="50%">
-      <img src="docs/images/heatmap.png" alt="Grad-CAM Heatmap Visualization">
+      <img src="2.png" alt="Grad-CAM Heatmap Visualization">
     </td>
     <td align="center" width="50%">
-      <img src="docs/images/predictions.png" alt="Prediction Results">
+      <img src="1" alt="Prediction Results">
     </td>
   </tr>
   <tr>
