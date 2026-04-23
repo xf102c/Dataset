@@ -1,4 +1,4 @@
-# YOLO-DMSE: Dynamic Multi-Kernel Perception and Signal Enhancement Model for Real-Time Industrial Weld Detection
+# Multi-Kernel Perception-Enhanced Feature Learning for Industrial Weld Defect Detection
 
 <p align="center">
   <a href="https://github.com/xf102c"><img src="https://img.shields.io/badge/GitHub-@xf102c-181717.svg?logo=GitHub" alt="GitHub" target="_blank"></a>
