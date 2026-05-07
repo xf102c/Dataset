@@ -96,6 +96,7 @@ Since the WD-DEFT dataset is acquired from authentic and active industrial produ
 
 **How to Request Access:**
 If you wish to utilize this dataset for your research, please contact the corresponding authors via email with your institutional affiliation and a brief description of your research plan. Access will be granted upon successful review and approval.
+The WD-DEFT dataset can be accessed fromhttps://drive.google.com/drive/folders/1qYzLOM4aRmVsyQwWzmM_e74D2xHAHkNd?usp=sharing
 
 If you have any questions, ideas, or collaboration proposals, please feel free to open an issue or reach out directly!
 
